@@ -5,23 +5,48 @@
 }
 
 body {
-  background-color: #efedd6;
+  background-color: #f3e8ff;
+  color: #f3e8ff;
   font-family: "Roboto", sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   overflow-x: hidden;
-  margin: 0;
+  margin: 20px 0;
 }
 
 h1 {
-  margin: 10px;
+  margin: 15px;
+  text-align: center;
+}
+
+.pulsate {
+  width: 500px;
+  height: 70px;
+  border-radius: 20px;
+  background-color: #ce5959;
+  animation: pulsate 4s ease-out infinite;
+}
+
+@keyframes pulsate {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 .box {
-  background-color: steelblue;
-  color: #fff;
+  background-color: #89375f;
+  color: #bacddb;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -33,6 +58,9 @@ h1 {
   /* will move the box from the visible screens (thats why 400%) */
   transform: translateX(400%);
   transition: transform 0.4s ease;
+}
+.first {
+  margin-top: 20px;
 }
 .box:nth-of-type(even) {
   transform: translateX(-400%);
